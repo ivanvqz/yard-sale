@@ -22,6 +22,16 @@ html {
     se le aplicara a todos los elementos */
 }
 
+/* GLOBALES */
+a {
+    text-decoration: none;
+    color: var(--hospital-green);
+    font-size: var(--md);
+}
+p {
+    font-size: var(--md);
+
+}
 body{
     font-family: 'Quicksand', sans-serif;
     font-size: 1.6rem;
@@ -39,6 +49,7 @@ body{
 .form-container {
     display: grid;
     grid-template-columns-row: auto 1fr auto;
+    justify-items: center;
     width: 30rem;
 }
 
@@ -52,7 +63,8 @@ body{
 }
 
 .title {
-    font-size: var(--lg)
+    font-size: var(--lg);
+    font-weight: 700;
     margin-bottom: 1.2rem;
     text-align: center;
 }
@@ -60,7 +72,7 @@ body{
 .subtitle {
     color: var(--dark);
     font-size: var(--md);
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 0; 
     margin-bottom: 3.2rem; 
 }
@@ -105,4 +117,31 @@ body{
     .logo {
         display: block;
     }
+}
+
+/* EMAIL SEND PAGE */
+.email-image {
+    display: grid;
+    place-items: center;
+
+    width: 13.2rem;
+    height: 13.2rem;
+    background-color: var(--text-input-field);
+    border-radius: 50%;
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+}
+.email-image img {
+    width: 8rem;
+}
+.form-container p {
+    text-align: center;
+    margin-bottom: 3.2rem;
+    font-size: var(--sm);
+}
+.form-container a {
+    text-align: center;
+    margin-bottom: 3.2rem;
+    font-size: var(--sm);
+    font-weight: 700;
 }
