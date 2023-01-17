@@ -101,7 +101,11 @@ body{
 .input-email {
     margin-bottom: 2.2rem;
 }
-
+.input-name,
+.input-email,
+.input-password {
+    margin-bottom: 2.2rem;
+}
 .login-button {
     margin: 1.4rem 0 3rem 0;
 }
@@ -181,4 +185,38 @@ body{
          contenedor. */
         margin-bottom: 2.4rem;
     }
+}
+
+
+/* MY ACCOUNT */
+.title-account {
+    font-size: var(--lg);
+    font-weight: 700;
+    text-align: start;
+}
+
+.form-ac {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (max-width: 640px) {
+    .form-container {
+        height: 100%;
+    }
+    .form-ac {
+        height: 100%;
+        flex-direction: space-between;
+        justify-content: space-between;
+    }
+    .edit-button {
+        margin-bottom: 2.4rem;
+    }
+
+}
+
+.form-ac div {
+    display: flex;
+    flex-direction: column;
 }
