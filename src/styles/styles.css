@@ -47,9 +47,14 @@ body{
 }
 
 .form-container {
-    display: grid;
+    /* display: grid;
     grid-template-columns-row: auto 1fr auto;
-    justify-items: center;
+    justify-items: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1.2rem;
     width: 30rem;
 }
 
@@ -156,7 +161,7 @@ body{
     width: 8rem;
 }
 .form-container p {
-    text-align: center;
+    text-align: left;
     margin-bottom: 3.2rem;
     font-size: var(--sm);
 }
@@ -193,12 +198,14 @@ body{
     font-size: var(--lg);
     font-weight: 700;
     text-align: start;
+    margin-top: 3.2rem;
 }
 
 .form-ac {
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: start;
 }
 
 @media (max-width: 640px) {
@@ -207,7 +214,6 @@ body{
     }
     .form-ac {
         height: 100%;
-        flex-direction: space-between;
         justify-content: space-between;
     }
     .edit-button {
@@ -219,4 +225,12 @@ body{
 .form-ac div {
     display: flex;
     flex-direction: column;
+}
+
+
+/* MY ACCOUNT */
+.value {
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin: 0.8rem 0 3.2rem 0;
 }
