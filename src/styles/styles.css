@@ -31,6 +31,17 @@ a {
     color: var(--hospital-green);
     font-size: var(--md);
 }
+a:hover {
+    color: var(--dark);
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+    
+}
 p {
     font-size: var(--md);
 
@@ -340,4 +351,40 @@ body{
 .desktop-menu ul li:not(:last-child) {
     font-weight: 700;
 
+}
+
+/* MENU MOBILE */
+.mobile-menu {
+    padding: 2.4rem;
+}
+.mobile-menu a {
+    color: var(--black);
+    font-weight: 700;
+}
+
+.mobile-menu ul{
+    margin-top: 2.4rem;
+}
+.mobile-menu ul:nth-child(1){ /* se aplica un borde al final de las categorías*/
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.mobile-menu ul:last-child { /* mueve el último ul al final de la pantalla*/
+    position: absolute;
+    bottom: 0; /* El borde inferior del botón estará alineado con el borde inferior de su elemento
+     contenedor. */
+    margin-bottom: 2.4rem;
+}
+.mobile-menu ul li{ /* para la separación entre elementos de lista*/
+    margin-bottom: 2.4rem;
+}
+
+.mobile-menu .email { /* para el email*/
+    font-size: var(--sm);
+    font-weight: 500;
+    color: var(--very-light-pink);
+}
+.mobile-menu .sign-out { /* para el sign out*/
+    font-size: var(--sm);
+    /* font-weight: 500; */
+    color: var(--hospital-green);
 }
