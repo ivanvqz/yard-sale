@@ -408,6 +408,7 @@ body{
 .my-order-container {
     display: grid;
     grid-template-rows: auto 1fr auto;
+    align-items: center;
     width: 30rem;
 }
 
@@ -469,4 +470,37 @@ body{
     color: var(--black);
     font-size: var(--mg);
     font-weight: 700;
+}
+
+/* ORDERS */
+.orders {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    /* display: flex;
+    justify-content: space-around; */
+    gap: 1.6rem;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.orders div {
+    display: flex;
+    flex-direction: column;
+}
+.orders div p{
+    margin: 0;
+}
+.orders div p:first-child {
+    font-size: var(--md);
+    font-weight: 700;
+}
+.orders div p:last-child {
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+}
+
+.orders .price{
+    font-size: var(--md);
+    font-weight: 700;
+    text-align: end;
 }
