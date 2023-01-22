@@ -50,6 +50,10 @@ p {
     font-size: var(--md);
 
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 body{
     font-family: 'Quicksand', sans-serif;
     font-size: 1.6rem;
@@ -264,6 +268,7 @@ body{
 
 .product-card {
     width: var(--card-width);
+    margin-top: 1.2rem;
 }
 
 .product-card img {
@@ -503,4 +508,150 @@ body{
     font-size: var(--md);
     font-weight: 700;
     text-align: end;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.4rem 4rem;
+    background-color: var(--white);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+.menu {
+    display: none; /* oculta el menú en desktop */
+}
+.logo {
+    margin: 0;
+    display: flex;
+    width: 10rem;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+.navbar-left, .items{
+    display: flex;
+    gap: 2.4rem;
+}
+.navbar-right ul{
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.navbar-left ul,
+.navbar-right ul {
+    display: flex;
+    martin-top: 2.4rem;
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a{
+    border: 1px solid var(--white);
+    color: var(--very-light-pink);
+    border-radius: 8px;
+    padding: .2rem .6rem;
+}
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover{
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    border-radius: 8px;
+    padding: .2rem .6rem;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 2.4rem 2rem;
+    }
+    .navbar-left ul{
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    .navbar-right .navbar-email{
+        display: none;
+    }
+}
+
+nav .navbar-right ul li span {
+    position: relative; /* el span se va a ubicar de acuerdo al ul*/
+    top: -1.5rem; /* para que el número se ubique en el centro del icono */
+    font-size: var(--sm);
+    background-color: var(--hospital-green);
+    padding: .1rem .3rem;
+    border-radius: 50%;
+    font-weight: 700;
+    color: var(--white);
+}
+
+/* PRODUCT-DETAILS */
+.product-detail {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 30rem;
+    padding-bottom: 2.4rem;
+    position: absolute;
+    right: 0;
+}
+.product-detail > img:nth-child(1) { /* el primero hijo*/
+    background-color: hsl(210, 29%, 24%);
+    padding: 1rem;
+    border-radius: 20px;
+    position: absolute;
+    top: .8rem; /*se ubican de acuero al padre (product-detail)*/
+    left: .8rem;
+    cursor: pointer;
+}
+.product-detail .product-image {
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+.product-detail .product-infos .add-to-cart-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.product-infos {
+    margin: 2.4rem 2.4rem 0 2.4rem;
+}
+
+.product-infos p {
+    margin: 2rem 0 0 0 ;
+    font-size: var(--md);
+    font-weight: 700;
+    margin: 0 0 .4rem 0;
+}
+
+.product-infos .titles {
+    margin: 0 0 3rem 0;
+    font-size: var(--md);
+    color: var(--very-light-pink);
+}
+.product-infos .description {
+    margin: 0 0 3rem 0;
+    font-size: var(--md);
+    color: var(--very-light-pink);
+}
+
+@media screen and (max-width: 768px) {
+    .product-detail {
+        width: 100%;
+    }
+    .product-detail > img:nth-child(1) {
+        top: 0;
+        left: 0;
+    }
+    
+    .product-infos {
+        margin: 2.4rem 1.2rem 0 1.2rem;
+    }
 }
